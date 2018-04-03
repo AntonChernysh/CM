@@ -96,10 +96,10 @@ resource "aws_security_group" "allow_ssh" {
 }
 
 resource "aws_instance" "linux" {
-	ami           = "ami-916f59f4"
+	ami           = "${var.ami}"
 	instance_type = "t2.micro"
 	subnet_id = "${aws_subnet.sub1.id}"
-	key_name = "anton_tf"
+	key_name = "${var.key_name}"
 	vpc_security_group_ids = ["${aws_security_group.allow_ssh.id}"] 
 	count = 1
 	tags {
