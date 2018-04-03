@@ -1,7 +1,0 @@
----
-- hosts: db
-  become: true
-  roles: 
-      - core_components
-      - mysql
-      - wordpress
