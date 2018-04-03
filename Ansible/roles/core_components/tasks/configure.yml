@@ -1,0 +1,22 @@
+---
+#configuring
+#- shell: /bin/rm -rf /etc/nginx/sites-enabled/*
+- name: 1)Clean sites-enabled
+  file:
+    state: absent
+    path: "/etc/nginx/sites-enabled"
+- name: 2)Clean sites-enabled
+  file:
+    state: directory
+    path: "/etc/nginx/sites-enabled"
+
+- name: wp.conf file
+  copy: src=wp.conf dest=/etc/nginx/sites-available/wp.conf
+  notify:
+   - restart nginx service
+
+- name: link nginx "wordpress" vhost in sites-enabled
+  action: file src=/etc/nginx/sites-available/wp.conf dest=/etc/nginx/sites-enabled/wp.conf state=link
+  notify:
+   - restart nginx service
+

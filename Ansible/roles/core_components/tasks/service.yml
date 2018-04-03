@@ -1,0 +1,8 @@
+---
+#start apache service
+- name: starting php-fpm service
+  service: name=php7.0-fpm state=started
+- name: starting nginx service
+  service: name=nginx state=started
+- name: starting mysql service
+  service: name=mysql state=started

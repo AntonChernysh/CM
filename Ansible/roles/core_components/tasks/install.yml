@@ -1,0 +1,36 @@
+---
+#installing packages
+- name: Install nginx
+  apt:
+   name: nginx
+   state: latest
+
+- name: Install php-fpm
+  apt:
+   name: php-fpm
+   state: latest
+
+- name: Install php-mysql
+  apt:
+   name: php-mysql
+   state: latest
+
+- name: Install python-mysql
+  apt:
+   name: python-mysqldb
+   state: latest
+
+- name: Install php-mcrypt
+  apt:
+   name: php-mcrypt
+   state: latest
+
+- name: Install php-curl
+  apt:
+   name: php-curl
+   state: latest
+
+- name: Install mysql
+  apt:
+   name: mysql-server
+   state: latest
