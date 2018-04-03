@@ -6,4 +6,4 @@ ROLES:
 * wordpress: Download anc donfigure wordpress
 
 USAGE:
-ansible-playbook wordpress.yml -u ubuntu --key-file /home/ec2-user/key.pem
+ansible-playbook wordpress.yml -u ubuntu --key-file key.pem
