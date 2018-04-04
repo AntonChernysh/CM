@@ -1,4 +1,5 @@
 Prerequisites:
+* S3 bucket for Terraform state.
 * SSH keypair created in AWS
 * Private key downloaded to your management machine. 
 
