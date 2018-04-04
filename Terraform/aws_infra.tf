@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "terraform-state-anton1"
+    bucket = "{var.s3_state}"
     key    = "all/terraform.tfstate"
     region = "${var.region}"
   }
@@ -13,7 +13,7 @@ provider "aws" {
 data "terraform_remote_state" "all" {
   backend = "s3"
   config {
-    bucket = "terraform-state-anton1"
+    bucket = "{var.s3_state}"
     key    = "all/terraform.tfstate"
     region = "${var.region}"
   }
