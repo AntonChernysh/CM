@@ -3,7 +3,7 @@
 ROLES:
 * `core_components`: Install mysql, nginx, php-*, etc. Configure nginx. 
 * `mysql`: Create DB, User, give user access to DB
-* `wordpress`: Download anc donfigure wordpress
+* `wordpress`: Download and donfigure wordpress
 
 HOW-TO:
 * Put IP address of your machine to [web] group of hosts file
