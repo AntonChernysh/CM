@@ -3,7 +3,7 @@ Prerequisites:
 * Private key downloaded to your management machine. 
 
 How-to:
-* Weview and populate variables with your values.
+* Review `variables.tf` and update all variables with your values.
 * `terraform plan`
 * `terraform apply`
 
