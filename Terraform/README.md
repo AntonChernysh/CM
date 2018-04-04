@@ -1,5 +1,5 @@
 Prerequisites:
-* Keypair in AWS
+* SSH keypair created in AWS
 * Private key downloaded to your management machine. 
 
 How-to:
