@@ -1,5 +1,5 @@
 ---
-- hosts: db
+- hosts: web
   become: true
   roles: 
       - core_components

@@ -2,12 +2,12 @@ terraform {
   backend "s3" {
     bucket = "terraform-state-anton1"
     key    = "all/terraform.tfstate"
-    region = "us-east-2"
+    region = "${var.region}"
   }
 }
 
 provider "aws" {
-	region     = "us-east-2"	
+	region     = "${var.region}"	
 	}
 
 data "terraform_remote_state" "all" {
@@ -15,7 +15,7 @@ data "terraform_remote_state" "all" {
   config {
     bucket = "terraform-state-anton1"
     key    = "all/terraform.tfstate"
-    region = "us-east-2"
+    region = "${var.region}"
   }
 }
 
@@ -101,6 +101,16 @@ resource "aws_instance" "linux" {
 	subnet_id = "${aws_subnet.sub1.id}"
 	key_name = "${var.key_name}"
 	vpc_security_group_ids = ["${aws_security_group.allow_ssh.id}"] 
+	provisioner "remote-exec" {
+		inline = [
+			"sudo apt update && sudo apt upgrade -y && sudo apt install python -y"
+		]
+		connection {
+			type     = "ssh"
+			user     = "ubuntu"
+			private_key = "${file(var.private_key)})"
+		}
+	}
 	count = 1
 	tags {
 		Name = "${var.owner}_tf_managed"
