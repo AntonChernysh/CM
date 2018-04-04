@@ -1,4 +1,4 @@
-Install latest WordPress on Ubuntu
+**Install latest WordPress on Ubuntu**
 
 ROLES:
 * `core_components`: Install mysql, nginx, php-*, etc. Configure nginx. 
