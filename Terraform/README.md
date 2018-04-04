@@ -1,5 +1,6 @@
 Prerequisites:
 * Keypair in AWS
+* Private key downloaded to your management machine. 
 
 How-to:
 * Weview and populate variables with your values.
