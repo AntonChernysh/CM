@@ -5,7 +5,7 @@ provider "aws" {
 data "terraform_remote_state" "all" {
   backend = "s3"
   config {
-    bucket = "{var.s3_state}"
+    bucket = "${var.s3_state}"
     key    = "all/terraform.tfstate"
     region = "${var.region}"
   }

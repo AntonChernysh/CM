@@ -5,14 +5,14 @@ variable "owner" {
   default = "Anton"
 }
 variable "s3_state" {
-  default = "terraform-state-anton1"
+  default = "tf-state-anton1"
 }
 variable "key_name" {
-  default = "anton_tf"
+  default = "amplify-test"
 }
 variable "ami" {
   default = "ami-916f59f4"
 }
 variable "private_key" {
-  default = "/home/ec2-user/key.pem"
+  default = "/Projects/1_Amplify/amplify-test.pem"
 }
