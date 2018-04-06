@@ -95,7 +95,7 @@ resource "aws_instance" "linux" {
 	vpc_security_group_ids = ["${aws_security_group.allow_ssh.id}"] 
 	provisioner "remote-exec" {
 		inline = [
-			"sudo apt update && sudo apt upgrade -y && sudo apt install python -y"
+			"sudo apt update -y && sudo apt upgrade -y && sudo apt install python -y"
 		]
 		connection {
 			type     = "ssh"
