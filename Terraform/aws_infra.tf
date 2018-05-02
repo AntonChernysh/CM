@@ -100,7 +100,7 @@ resource "aws_instance" "linux" {
 		connection {
 			type     = "ssh"
 			user     = "ubuntu"
-			private_key = "${file(var.private_key)})"
+			private_key = "${file(var.private_key)}"
 		}
 	}
 	count = 1
