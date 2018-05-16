@@ -5,7 +5,7 @@ variable "owner" {
   default = "Anton"
 }
 variable "s3_state" {
-  default = "terraform-state-anton1"
+  default = "tf-state-anton1"
 }
 variable "key_name" {
   default = "anton_tf"
